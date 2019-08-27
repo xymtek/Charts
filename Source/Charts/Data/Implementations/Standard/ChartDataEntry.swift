@@ -11,8 +11,12 @@
 
 import Foundation
 
-open class ChartDataEntry: ChartDataEntryBase, NSCopying
+open class ChartDataEntry: ChartDataEntryBase, NSCopying, Comparable
 {
+    public static func < (lhs: ChartDataEntry, rhs: ChartDataEntry) -> Bool {
+        return lhs.x == rhs.x && lhs.y == rhs.y
+    }
+    
     /// the x value
     @objc open var x = 0.0
     
