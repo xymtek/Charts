@@ -600,7 +600,11 @@ open class LineChartRenderer: LineRadarRenderer
                 {
                     continue
                 }
+              
                 
+                // Skip Circles and Accessibility if not enabled.
+                //reduces CPU significantly if not needed
+              
                 if !dataSet.isDrawCirclesEnabled
                 {
                     continue
