@@ -601,6 +601,11 @@ open class LineChartRenderer: LineRadarRenderer
                     continue
                 }
                 
+                if !dataSet.isDrawCirclesEnabled
+                {
+                    continue
+                }
+                
                 // Accessibility element geometry
                 let scaleFactor: CGFloat = 3
                 let accessibilityRect = CGRect(x: pt.x - (scaleFactor * circleRadius),
@@ -619,11 +624,6 @@ open class LineChartRenderer: LineRadarRenderer
                     }
 
                     accessibilityOrderedElements[i].append(element)
-                }
-
-                if !dataSet.isDrawCirclesEnabled
-                {
-                    continue
                 }
 
                 context.setFillColor(dataSet.getCircleColor(atIndex: j)!.cgColor)

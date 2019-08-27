@@ -125,7 +125,6 @@ open class BarChartView: BarLineChartViewBase, BarChartDataProvider
         }
         
         barData.groupBars(fromX: fromX, groupSpace: groupSpace, barSpace: barSpace)
-        notifyDataSetChanged()
     }
     
     /// Highlights the value at the given x-value in the given DataSet. Provide -1 as the dataSetIndex to undo all highlighting.

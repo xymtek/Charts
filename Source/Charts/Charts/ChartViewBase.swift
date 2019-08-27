@@ -219,9 +219,6 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
                     set.valueFormatter = _defaultValueFormatter
                 }
             }
-            
-            // let the chart know there is new data
-            notifyDataSetChanged()
         }
     }
     
